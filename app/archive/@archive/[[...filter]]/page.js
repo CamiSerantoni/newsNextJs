@@ -29,13 +29,12 @@ export default function FilteredNewsPage({ params }) {
   if (news && news.length > 0) {
     newsContent = <NewsList news={news} />;
   }
-
   if (
-    (selectedYear && getAvailableNewsYears().includes(+selectedYear)) ||
+    (selectedYear && !getAvailableNewsYears().includes(+selectedYear)) ||
     (selectedMonth &&
       !getAvailableNewsMonths(selectedYear).includes(+selectedMonth))
   ) {
-    throw new Error("Invalid Filter ");
+    throw new Error("invalid filter");
   }
   return (
     <>
