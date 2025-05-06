@@ -11,8 +11,11 @@ export default function ImagePage({ params }) {
   }
 
   return (
-    <div className="fullscreen-image">
-      <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
-    </div>
+    <>
+      <h2> Intercepted!!</h2>
+      <div className="fullscreen-image">
+        <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
+      </div>
+    </>
   );
 }
